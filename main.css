@@ -1,0 +1,150 @@
+:root {
+    --background-color: #FBEAEB;
+    --text-color: #2F3C7E;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+@font-face {
+    font-family: Code2000;
+    src: url('CODE2000.TTF');
+}
+
+* {
+    color: var(--text-color);
+    font-family: Code2000, Arial;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+.headshot > img {
+    width: 20vw;
+    height: 27vw;
+}
+
+.skills {
+    flex-basis: 50%;
+}
+
+.headshot {
+    flex-basis: 50%;
+}
+
+figure > video {
+    width: 80vw;
+    height: 100vh;
+}
+
+iframe {
+    width: 90vw;
+    height: 90vh;
+}
+
+table, th, td {
+    border: 0.1rem solid;
+}
+
+ul > * {
+    display: inline;
+    padding: 1rem;
+}
+
+.coursework > picture > * {
+    width: 70vw;
+    height: 50vw;;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    background-color: #FBEAEB;
+    animation-name: tableColor;
+    animation-duration: 4s;
+}
+  
+@keyframes tableColor {
+    from {background-color: #FBEAEB;}
+    to {background-color: #2F3C7E;}
+}
+
+.headshot > img {
+    transition: width 2s, height 4s;
+}
+
+.headshot > img:hover {
+    width: 40vw;
+    height: 54vw;
+}
+
+h1 {
+    transform: scaleY(2.5);
+}
+
+
+  
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 1rem;
+    }
+    
+    h2 {
+        font-size: 0.9rem;
+    }
+    table, th, td {
+        border: 0.5rem solid;
+    }
+    
+    ul > * {
+        display: inline;
+        padding: 0.5rem;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    table, th, td {
+        border: 0.75rem solid;
+    }
+    
+    ul > * {
+        display: inline;
+        padding: 0.75rem;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+    table, th, td {
+        border: 0.1rem solid;
+    }
+    
+    ul > * {
+        display: inline;
+        padding: 1rem;
+    }
+  }

@@ -9,55 +9,31 @@
                 display: block;
             }
         </style>
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <header>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="contact.html">Contact</a>
-                <a href="experiments.html">Experiments</a>
             </nav>
-            <details>
-                <summary>Display Mode</summary>
-                <p>This page is set to <code>display: block;</code></p>
-            </details>
         </header>
         <main>
-            <section>
+            <section class="title">
                 <h1>Miko Brown <span>Portfolio</span></h1>
-                <br>
-                <hr>
-            </section>
-
-            <section>
-                <h2>Recipe Manager Website</h2>
-                <iframe src="https://cse110-sp21-group36.github.io/cse110-sp21-group36/source/recipe_manager.html" width="1000" height="600" title="video"></iframe>
             </section>
             
-            <hr>
-
-            <section>
-                <h2>Life as D1 Rower</h2>
-                <h3>Technique Video</h3>
+            <h2>Life as D1 Rower</h2>
+            <section class="rowing">
                 <figure>
-                    <video width="600" height="400" src="rowing.mov" controls></video>
+                    <video src="rowing.mov" controls></video>
                     <figcaption>Four Rowing Video</figcaption>
                 </figure>
-
-                <h3>The sound of rowing practice</h3>
-                <audio controls>
-                    <source src="rowingPractice.mp3" type="audio/mpeg">
-                    Audio not supported
-                </audio>
             </section>
 
-            <aside>
-            <section>
-                <hr>
-                <h2>Coursework</h2>
+            <h2>Coursework</h2>
+            <section class="coursework">
                 <div class="coursesDescription">
-                    <pre>I have taken <strong>many</strong> <i>courses</i>, 
-                                at UCSD!</pre>
                     <p>I have <b>completed</b> <em>these</em> :)</p>
                     <ul>
                         <li>Software Engineering</li>
@@ -67,19 +43,21 @@
                     </ul>
                 </div>
                 <picture>
-                    <source srcset="computerStudying.jpg" type="image/jpg" media="(min-width:1028px)">
-                    <img src="smallComputerStudying.jpg" alt="studying">
+                    <!-- https://careerfoundry.com/en/blog/web-development/what-does-it-take-to-become-a-web-developer-everything-you-need-to-know-before-getting-started/ -->
+                    <source srcset="smallComputerStudying.webp" type="image/webp" media="(min-width:1028px)">
+                    <!-- https://www.greenbaypressgazette.com/story/news/2015/09/04/good-study-habits-learn-dont-just-perform/71657986/ -->
+                    <img src="studying.webp" alt="studying">
                 </picture>
-                <p>Why I love computer science</p>
-                <ol>
-                    <li>I want to leverage technology to help improve people's lives</li>
-                    <li>I am passionate about problem solving</li>
-                </ol>
             </section>
-            </aside>
+            
+            <h2>Recipe Manager Website</h2>
+            <section class="website"></section>
+                <br>
+                <iframe src="https://cse110-sp21-group36.github.io/cse110-sp21-group36/source/recipe_manager.html" width="1000" height="600" title="video"></iframe>
+            </section>
 
-            <section>
-                <h2>Skills</h2>
+            <h2>Skills</h2>
+            <section class="skills">
                 <table>
                     <caption>Technical Skills</caption>
                     <colgroup>
@@ -88,29 +66,38 @@
                     <tr>
                         <th>Skill</th>
                         <th>Ability Level</th>
+                        <th>Experience</th>
                     </tr>
                     <tr>
                         <td>HTML</td>
                         <td>Intermediate</td>
+                        <td>6 months</td>
                     </tr>
                     <tr>
                         <td>CSS</td>
                         <td>Beginner</td>
+                        <td>1 month</td>
                     </tr>
                     <tr>
                         <td>Javascript</td>
                         <td>Intermediate</td>
+                        <td>1 year</td>
                     </tr>
                     <tr>
                         <td>REST API's</td>
                         <td>Advanced</td>
+                        <td>1 year</td>
                     </tr>
                 </table>
             </section>
 
-            <script></script>
+            <br>
         </main>
         <footer>
+            <details>
+                <summary>Display Mode</summary>
+                <p>This page is set to <code>display: grid;</code></p>
+            </details>
         </footer>
     </body>
 </html>
