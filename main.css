@@ -38,8 +38,8 @@ h2 {
     flex-basis: 50%;
 }
 
-figure > video {
-    width: 80vw;
+figure > img {
+    width: 90vw;
     height: 100vh;
 }
 
