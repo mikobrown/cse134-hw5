@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Custom Dialogs</title>
+        <script type="text/javascript" src="./node_modules/dompurify/dist/purify.js"></script>
+    </head>
+    <body>
+        <main>
+            <button id="alertBtn" type="button">Alert</button>
+            <button id="confirmBtn" type="button">Confirm</button>
+            <button id="promptBtn" type="button">Prompt</button>
+            <br>
+            <dialog id="dialogBox">
+                <p id="dialogText"></p>
+                <button id="okAlert">OK</button>
+                <button id="cancelConfirm">Cancel</button>
+                <button id="okConfirm">OK</button>
+                <form id="form">
+                    <input type="text" id="promptInput" name="promptInput">
+                    <button type="button" id="cancelPrompt">Cancel</button>
+                    <button type="submit" id="submit">OK</button>
+                </form>
+            </dialog>
+            <output id="result"></output>
+        </main>
+        <script type="module">
+            import { alertDialog, confirmDialog, promptDialog} from './customDialog.js';
+            let resultEl = document.getElementById('result');
+            document.getElementById('alertBtn').addEventListener('click', () => {
+                resultEl.innerText = ``;
+                setTimeout(() => {
+                    alertDialog();
+                }, 0);
+            });
+            document.getElementById('confirmBtn').addEventListener('click', () => {
+                resultEl.innerText = ``;
+                setTimeout(() => {
+                    confirmDialog();
+                }, 0);
+            });
+            document.getElementById('promptBtn').addEventListener('click', () => {
+                resultEl.innerText = ``;
+                setTimeout(() => {
+                    promptDialog();
+                }, 0);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Native Dialogs</title>
+        <script type="text/javascript" src="./node_modules/dompurify/dist/purify.js"></script>
+    </head>
+    <body>
+        <main>
+            <button id="alertBtn" type="button">Alert</button>
+            <button id="confirmBtn" type="button">Confirm</button>
+            <button id="promptBtn" type="button">Prompt</button>
+            <button id="saferBtn" type="button">Safer Prompt</button>
+            <br>
+            <output id="result"></output>
+        </main>
+        <script>
+
+            let resultEl = document.getElementById('result');
+            document.getElementById('alertBtn').addEventListener('click', () => {
+                resultEl.innerText = ``;
+                setTimeout(() => {
+                    alert('alert pressed');
+                }, 0);
+            });
+            document.getElementById('confirmBtn').addEventListener('click', function () {
+                resultEl.innerText = ``;
+                setTimeout(() => {
+                    let result = confirm('Do you confirm?');
+                    if (result) {
+                        resultEl.innerText = `The value returned by the confirm method is ${result}`;
+                    }
+                    else {
+                        resultEl.innerText = `The value returned by the confirm method is ${result}`;
+                    }
+                }, 0);
+            });
+            document.getElementById('promptBtn').addEventListener('click', function () {
+                resultEl.innerText = ``;
+                setTimeout(() => {
+                    let result = prompt('enter your name:');
+                    if (result != null) {
+                        if (result.length == 0) {
+                            resultEl.innerHTML = `User didn't enter anything`;
+                        }
+                        else {
+                            resultEl.innerHTML = `Hello ${result}`;
+                        }
+                    }
+                    else {
+                        resultEl.innerHTML = `User didn't enter anything`;
+                    }
+                }, 0);
+            });
+            document.getElementById('saferBtn').addEventListener('click', function (e) {
+                resultEl.innerText = ``;
+                setTimeout(() => {
+                    let result = prompt('enter your name:');
+                    if (result != null) {
+                        result = DOMPurify.sanitize(result);
+                        if (result.length == 0) {
+                            resultEl.innerHTML = `User didn't enter anything`;
+                        }
+                        else {
+                            resultEl.innerHTML = `Hello ${result}`;
+                        }
+                    }
+                    else {
+                        resultEl.innerHTML = `User didn't enter anything`;
+                    }
+                }, 0);
+            });
+        </script>
+    </body>
+</html>
