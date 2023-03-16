@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Method Test</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <script type="module">
+            import {getEvent, deleteEvent, postEvent, putEvent} from './methodtest.js';
+
+            window.addEventListener('DOMContentLoaded', () => {
+                let getBtn = document.getElementById('getBtn');
+                let deleteBtn = document.getElementById('deleteBtn');
+                let postBtn = document.getElementById('postBtn');
+                let putBtn = document.getElementById('putBtn');
+                getBtn.addEventListener('click', getEvent);
+                deleteBtn.addEventListener('click', deleteEvent);
+                postBtn.addEventListener('click', postEvent);
+                putBtn.addEventListener('click', putEvent);
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="methodtest.html">Method Test</a>
+                <a href="webcomponent.html">Web Component</a>
+            </nav>
+            <h1>Method Tests</h1>
+        </header>
+        <main>
+            <form action="" method="">
+                <label for="id">ID:</label>
+                <input type="number" id="id" name="id">
+                <br>
+                <label for="article_name">Article Name:</label>
+                <input type="text" id="article_name" name="article_name">
+                <br>
+                <label for="article_body">Article Body:</label>
+                <textarea id="article_body" name="article_body"></textarea>
+                <br>
+                <input type="text" id="date" name="date" hidden>
+                <br>
+            </form>
+            <button id="getBtn">getBtn</button>
+            <button id="deleteBtn">deleteBtn</button>
+            <button id="postBtn">postBtn</button>
+            <button id="putBtn">putBtn</button>
+            <br>
+            <output id="response" style="white-space: pre"></output>
+        </main>
+    </body>
+</html>
